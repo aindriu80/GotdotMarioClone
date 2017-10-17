@@ -8,11 +8,21 @@ var movementDirection = 0
 var playerSprite 
 var MAXJUMPCOUNT = 1
 var jumpcount = 0
+var deltaTime = 0
+var landed 
 #Constants
 const MAXIMUMSPEED = 300
 const MOVMULTI = 800
 const JUMPFORCE = 350
 const GRAVITY = 800
+
+func _animatePlayer():
+	if(playerSprite.get_frame()>=3):
+		playerSprite.set_frame(0)
+	if(playerSprite.get_frame()<3):
+		playerSprite.set_frame(playerSprite.get_frame()+1)
+	deltaTime = 0 
+	pass
 
 func _ready():
 	set_process(true)
@@ -23,13 +33,22 @@ func _process(delta):
 	if(Input.is_action_pressed("move_jump") and jumpcount<MAXJUMPCOUNT):
 		speedY = -JUMPFORCE
 		jumpcount+=1
+		playerSprite.set_frame(5)
+		landed = false
 	if(Input.is_action_pressed("move_left")):
 		facingDirection = -1
 		playerSprite.set_flip_h(true)
+		deltaTime = deltaTime + delta
+		if(deltaTime > 0.1):
+			_animatePlayer()
 	elif(Input.is_action_pressed("move_right")):
 		facingDirection = 1
 		playerSprite.set_flip_h(false)
-	else: facingDirection =0
+		deltaTime = deltaTime + delta
+		if(deltaTime > 0.1):
+			_animatePlayer()
+	else: 
+		facingDirection = 0
 	
 	if(facingDirection!=0):
 		speedX += MOVMULTI * delta
@@ -47,4 +66,7 @@ func _process(delta):
 		move(finalMov)
 		if (normal == Vector2(0, -1)):
 			jumpcount=0
+			if(!landed):
+				playerSprite.set_frame(0)
+				landed = true
 	pass
