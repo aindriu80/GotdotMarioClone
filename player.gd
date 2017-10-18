@@ -40,15 +40,22 @@ func _process(delta):
 		playerSprite.set_flip_h(true)
 		deltaTime = deltaTime + delta
 		if(deltaTime > 0.1):
-			_animatePlayer()
+			if(landed):
+				_animatePlayer()
 	elif(Input.is_action_pressed("move_right")):
 		facingDirection = 1
 		playerSprite.set_flip_h(false)
 		deltaTime = deltaTime + delta
 		if(deltaTime > 0.1):
-			_animatePlayer()
+			if(landed):
+				_animatePlayer()
 	else: 
 		facingDirection = 0
+		if(landed):
+			playerSprite.set_frame(4)
+		
+	if(velocity.x ==0 and landed):
+		playerSprite.set_frame(0)
 	
 	if(facingDirection!=0):
 		speedX += MOVMULTI * delta
