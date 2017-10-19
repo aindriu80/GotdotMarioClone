@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://resources/img/GodotSpriteSheet.tex" type="Texture" id=2]
@@ -13,6 +13,11 @@ extents = Vector2( 10, 13.1543 )
 
 custom_solver_bias = 0.0
 extents = Vector2( 323.222, 5.97586 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 8.70276, 8.57684 )
 
 [node name="World" type="Node2D"]
 
@@ -39,6 +44,26 @@ transform/pos = Vector2( 31.5864, 231.672 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
+
+[node name="Camera2D" type="Camera2D" parent="PlayerCharacter"]
+
+transform/pos = Vector2( 297.921, 136.037 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = 0
+limit/right = 10000000
+limit/bottom = 0
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
 
 [node name="Ground" type="Node2D" parent="."]
 
@@ -1089,5 +1114,37 @@ texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
 frame = 2
+
+[node name="Bricks" type="Node2D" parent="."]
+
+transform/pos = Vector2( -162.061, -178.022 )
+transform/scale = Vector2( 1.5, 1.5 )
+
+[node name="Sprite" type="Sprite" parent="Bricks"]
+
+transform/pos = Vector2( 310.165, 330.868 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Bricks"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 310.438, 330.799 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bricks/StaticBody2D"]
+
+transform/pos = Vector2( 310.438, 330.799 )
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
 
 
