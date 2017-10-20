@@ -69,6 +69,10 @@ func _process(delta):
 	if is_colliding():
 		var normal = get_collision_normal()
 		var finalMov = normal.slide(moveRemainder)
+		if(normal == Vector2(1,0) or normal == Vector2(-1,0)):
+			speedX = 0
+		else :
+			speedY = 0
 		speedY = 0
 		move(finalMov)
 		if (normal == Vector2(0, -1)):

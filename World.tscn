@@ -67,7 +67,6 @@ drag_margin/bottom = 0.2
 
 [node name="Ground" type="Node2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( -212.284, 81.3964 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground"]
@@ -76,6 +75,9 @@ input/pickable = false
 shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1.24447, 530.584, 328.899 )
 shapes/0/trigger = false
+shapes/1/shape = SubResource( 2 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1.24447, 1214.58, 328.899 )
+shapes/1/trigger = false
 collision/layers = 1
 collision/mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -91,9 +93,25 @@ shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 
+[node name="CollisionShape2D1" type="CollisionShape2D" parent="Ground/StaticBody2D"]
+
+transform/pos = Vector2( 1214.58, 328.899 )
+transform/scale = Vector2( 1, 1.24447 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 1
+
 [node name="Sprite" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 215.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite8 2" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 896.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -107,9 +125,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite8 5" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 896.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite6" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 354.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite8 3" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1035.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -123,9 +157,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite78" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1035.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite5" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 467.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite8" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1148.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -139,9 +189,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite73" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1148.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite6 2" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 606.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite68" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1287.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -155,9 +221,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite68 2" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1287.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite4" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 341.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite8 4" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1022.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -171,9 +253,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite77" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1022.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite6 6" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 480.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite68 4" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1161.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -187,9 +285,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite68 6" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1161.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite5 5" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 593.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite58 3" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1274.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -203,9 +317,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite574" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1274.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite56" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 732.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite58 4" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1413.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -219,9 +349,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite579" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1413.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite3" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 278.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite8 7" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 959.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -235,9 +381,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite74" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 959.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite6 3" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 417.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite68 3" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1098.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -251,9 +413,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite68 5" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1098.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite5 2" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 530.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite58" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1211.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -267,9 +445,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite575" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1211.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite53" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 669.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite58 2" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1350.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -283,9 +477,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite576" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1350.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite4 2" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 404.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite48" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1085.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -299,9 +509,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite475" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1085.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite46 4" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 543.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite468" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1224.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -315,9 +541,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite468 2" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1224.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite43" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 656.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite48 2" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1337.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -331,9 +573,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite473" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1337.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite46 2" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 795.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite468 3" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1476.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -347,9 +605,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite468 4" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1476.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite2" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 247.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite8 6" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 928.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -363,9 +637,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite76" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 928.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite6 5" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 386.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite68 7" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1067.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -379,9 +669,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite68 8" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1067.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite5 4" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 499.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite58 7" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1180.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -395,9 +701,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite58 5" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1180.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite55" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 638.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite58 6" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1319.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -411,9 +733,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite577" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1319.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite4 4" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 373.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite48 3" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1054.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -427,9 +765,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite477" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1054.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite46 6" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 512.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite468 6" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1193.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -443,9 +797,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite468 8" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1193.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite45" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 625.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite48 4" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1306.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -459,9 +829,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite474" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1306.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite46 3" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 764.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite468 7" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1445.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -475,9 +861,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite468 5" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1445.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite3 3" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 310.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite38" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 991.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -491,9 +893,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite373" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 991.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite36 2" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 449.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite367" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1130.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -507,9 +925,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite367 2" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1130.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite35" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 562.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite38 3" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1243.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -523,9 +957,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite38 4" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1243.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite36" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 701.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite38 5" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1382.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -539,9 +989,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite377" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1382.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite34" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 436.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite38 2" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1117.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -555,9 +1021,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite374" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1117.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite36 3" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 575.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite367 3" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1256.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -571,9 +1053,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite367 4" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1256.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite35 2" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 688.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite357 2" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1369.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -587,9 +1085,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite357" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1369.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite353" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 827.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite357 3" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1508.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -603,9 +1117,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite3566" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1508.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite1" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 231.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite8 8" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 912.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -619,9 +1149,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite75" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 912.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite6 4" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 370.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite68 9" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1051.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -635,9 +1181,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite68 10" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1051.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite5 3" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 483.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite58 9" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1164.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -651,9 +1213,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite573" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1164.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite54" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 622.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite58 8" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1303.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -667,9 +1245,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite578" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1303.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite4 3" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 357.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite48 5" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1038.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -683,9 +1277,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite476" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1038.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite46 5" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 496.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite468 10" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1177.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -699,9 +1309,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite468 9" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1177.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite44" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 609.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite48 6" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1290.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -715,9 +1341,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite48 7" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1290.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite46" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 748.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite48 8" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1429.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -731,9 +1373,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite478" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1429.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite3 2" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 294.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite38 6" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 975.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -747,9 +1405,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite376" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 975.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite36 5" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 433.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite367 8" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1114.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -763,9 +1437,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite367 5" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1114.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite35 4" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 546.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite357 7" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1227.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -779,9 +1469,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite3565" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1227.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite355" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 685.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite357 6" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1366.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -795,9 +1501,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite3567" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1366.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite33" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 420.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite38 7" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1101.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -811,9 +1533,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite375" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1101.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite36 4" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 559.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite367 6" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1240.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -827,9 +1565,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite367 7" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1240.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite35 3" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 672.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite357 4" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1353.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -843,9 +1597,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite3563" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1353.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite354" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 811.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite357 5" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1492.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -859,9 +1629,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite3564" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1492.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite2 2" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 263.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite28" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 944.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -875,9 +1661,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite273" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 944.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite26 2" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 402.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite266 2" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1083.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -891,9 +1693,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite266" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1083.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite25" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 515.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite28 4" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1196.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -907,9 +1725,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite28 2" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1196.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite26" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 654.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite28 3" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1335.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -923,9 +1757,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite276" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1335.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite24" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 389.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite28 5" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1070.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -939,9 +1789,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite275" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1070.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite26 4" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 528.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite266 5" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1209.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -955,9 +1821,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite266 3" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1209.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite25 3" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 641.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite256 4" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1322.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -971,9 +1853,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite2553" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1322.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite254" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 780.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite256 5" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1461.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -987,9 +1885,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite2555" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1461.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite23" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 326.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite28 6" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1007.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -1003,9 +1917,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite274" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1007.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite26 3" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 465.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite266 6" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1146.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -1019,9 +1949,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite266 4" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1146.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite25 2" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 578.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite256 2" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1259.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -1035,9 +1981,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite256" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1259.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite253" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 717.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite256 3" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1398.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -1051,9 +2013,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite2554" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1398.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite24 2" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 452.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite246" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1133.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -1067,9 +2045,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite2453" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1133.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite244 2" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 591.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite2444 2" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1272.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -1083,9 +2077,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite2444" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1272.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite243" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 704.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite246 3" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1385.64, 328.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
@@ -1099,6 +2109,14 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite246 4" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1385.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite244" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 843.64, 328.791 )
@@ -1107,9 +2125,25 @@ vframes = 2
 hframes = 2
 frame = 2
 
+[node name="Sprite246 2" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1524.64, 328.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
 [node name="Sprite245 3" type="Sprite" parent="Ground"]
 
 transform/pos = Vector2( 843.64, 343.791 )
+texture = ExtResource( 3 )
+vframes = 2
+hframes = 2
+frame = 2
+
+[node name="Sprite2454" type="Sprite" parent="Ground"]
+
+transform/pos = Vector2( 1524.64, 343.791 )
 texture = ExtResource( 3 )
 vframes = 2
 hframes = 2
