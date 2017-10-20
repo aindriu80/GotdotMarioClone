@@ -1,5 +1,6 @@
 extends KinematicBody2D
 #Variables
+var power = 1
 var speedX = 0
 var speedY = 0
 var velocity = Vector2(0,0)
@@ -68,6 +69,11 @@ func _process(delta):
 	var moveRemainder = move(velocity)
 	if is_colliding():
 		var normal = get_collision_normal()
+		var object = get_collider()
+		var objectParent = object.get_parent()
+		if(normal == Vector2(0,1)):
+			if (power>0):
+				objectParent.queue_free()
 		var finalMov = normal.slide(moveRemainder)
 		if(normal == Vector2(1,0) or normal == Vector2(-1,0)):
 			speedX = 0
