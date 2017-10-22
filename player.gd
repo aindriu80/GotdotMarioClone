@@ -17,6 +17,7 @@ const MOVMULTI = 800
 const JUMPFORCE = 350
 const GRAVITY = 800
 const bricksParticle_scene = preload("res://resources/scenes/BricksParticleScene.tscn")
+const powerUp_scene = preload("res://resources/scenes/PowerUpScene.tscn")
 
 func _animatePlayer():
 	if(playerSprite.get_frame()>=3):
