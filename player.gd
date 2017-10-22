@@ -73,12 +73,13 @@ func _process(delta):
 		var object = get_collider()
 		var objectParent = object.get_parent()
 		if(normal == Vector2(0,1)):
-			if (power>0):
-				objectParent.queue_free()
-				var particleEffect = bricksParticle_scene.instance()
-				particleEffect.get_node(".").set_emitting(true)
-				particleEffect.set_pos(get_pos()-Vector2(0,20))
-				get_tree().get_root().add_child(particleEffect)
+			if(objectParent.is_in_group("Bricks")):
+				if (power>0):
+					objectParent.queue_free()
+					var particleEffect = bricksParticle_scene.instance()
+					particleEffect.get_node(".").set_emitting(true)
+					particleEffect.set_pos(get_pos()-Vector2(0,20))
+					get_tree().get_root().add_child(particleEffect)
 		var finalMov = normal.slide(moveRemainder)
 		if(normal == Vector2(1,0) or normal == Vector2(-1,0)):
 			speedX = 0
