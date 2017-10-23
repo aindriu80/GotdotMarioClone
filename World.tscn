@@ -2332,6 +2332,6 @@ transform/pos = Vector2( 759.086, 0 )
 
 [node name="PowerUp" parent="." instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 552.797, 5.8327 )
+transform/pos = Vector2( 317.302, 284.753 )
 
 

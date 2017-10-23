@@ -9,20 +9,23 @@ var movementDirection = 1
 const SPEEDX = 200
 const GRAVITY = 800
 
-
 func _ready():
 	set_process(true)
 	pass
 
-func _process(delta):	
+func _process(delta):
 	speedY += GRAVITY * delta
 	velocity.x = SPEEDX * delta * movementDirection
 	velocity.y = speedY * delta
 	var movementRemainder = move(velocity)
 	if is_colliding():
 		var normal = get_collision_normal()
-		if( normal == Vector2(1,0) or normal == Vector2(-1,0)):
-			movementDirection = movementDirection * -1
+		if(normal == Vector2(0,-1)):
+			speedY = 0
+		if(normal == Vector2(1,0)):
+			movementDirection = 1
+		elif( normal == Vector2(-1,0)):
+			movementDirection = -1
 		var finalMovement = normal.slide(movementRemainder)
 		move(finalMovement)	
 	pass
