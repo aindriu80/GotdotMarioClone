@@ -2,10 +2,10 @@
 
 [ext_resource path="res://resources/img/Bush.png" type="Texture" id=1]
 [ext_resource path="res://resources/img/MapTileset.tex" type="Texture" id=2]
-[ext_resource path="res://PlayerCharacterScene.tscn" type="PackedScene" id=3]
-[ext_resource path="res://resources/img/Cloud.png" type="Texture" id=4]
-[ext_resource path="res://resources/scenes/PipeScene.tscn" type="PackedScene" id=5]
-[ext_resource path="res://resources/scenes/PowerUpScene.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Brick.tscn" type="PackedScene" id=3]
+[ext_resource path="res://PlayerCharacterScene.tscn" type="PackedScene" id=4]
+[ext_resource path="res://resources/img/Cloud.png" type="Texture" id=5]
+[ext_resource path="res://resources/scenes/PipeScene.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -2144,40 +2144,11 @@ shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 
-[node name="Bricks" type="Node2D" parent="." groups=[
-"Bricks",
-]]
+[node name="Bricks" parent="." groups=[
+"PowerUpBrick",
+] instance=ExtResource( 3 )]
 
-editor/display_folded = true
-transform/pos = Vector2( -162.061, -178.022 )
-transform/scale = Vector2( 1.5, 1.5 )
-
-[node name="Sprite" type="Sprite" parent="Bricks"]
-
-transform/pos = Vector2( 310.165, 330.868 )
-texture = ExtResource( 2 )
-vframes = 2
-hframes = 2
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Bricks"]
-
-input/pickable = false
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 310.438, 330.799 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bricks/StaticBody2D"]
-
-transform/pos = Vector2( 310.438, 330.799 )
-shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
+transform/pos = Vector2( 289, 324 )
 
 [node name="Bricks1" type="Node2D" parent="." groups=[
 "Bricks",
@@ -2284,7 +2255,7 @@ shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
 
-[node name="PlayerCharacter" parent="." instance=ExtResource( 3 )]
+[node name="PlayerCharacter" parent="." instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 48.2653, 38.8628 )
 
@@ -2293,45 +2264,43 @@ transform/pos = Vector2( 48.2653, 38.8628 )
 editor/display_folded = true
 transform/pos = Vector2( 197.483, 151.806 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="Cloud1" type="Sprite" parent="Cloud"]
 
 transform/pos = Vector2( 85.1281, -50.8918 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="Cloud2" type="Sprite" parent="Cloud"]
 
 transform/pos = Vector2( 157.302, -6.47714 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="Cloud3" type="Sprite" parent="Cloud"]
 
 transform/pos = Vector2( 352.541, -1.85062 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="Cloud4" type="Sprite" parent="Cloud"]
 
 transform/pos = Vector2( 414.537, 32.3857 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="Cloud5" type="Sprite" parent="Cloud"]
 
 transform/pos = Vector2( 484.86, -9.25308 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
-[node name="Pipe" parent="." instance=ExtResource( 5 )]
+[node name="Pipe" parent="." instance=ExtResource( 6 )]
 
-[node name="Pipe1" parent="." instance=ExtResource( 5 )]
+transform/pos = Vector2( 21.8211, -0.264908 )
+
+[node name="Pipe1" parent="." instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 627.13, 0 )
 
-[node name="Pipe2" parent="." instance=ExtResource( 5 )]
+[node name="Pipe2" parent="." instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 759.086, 0 )
-
-[node name="PowerUp" parent="." instance=ExtResource( 6 )]
-
-transform/pos = Vector2( 317.302, 284.753 )
 
 

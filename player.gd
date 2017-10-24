@@ -18,6 +18,7 @@ const JUMPFORCE = 350
 const GRAVITY = 800
 const bricksParticle_scene = preload("res://resources/scenes/BricksParticleScene.tscn")
 const powerUp_scene = preload("res://resources/scenes/PowerUpScene.tscn")
+const powerUpBrick_scene = preload("res://resources/scenes/PowerUpBoxScene.tscn")
 
 func _animatePlayer():
 	if(playerSprite.get_frame()>=3):
@@ -81,6 +82,11 @@ func _process(delta):
 					particleEffect.get_node(".").set_emitting(true)
 					particleEffect.set_pos(get_pos()-Vector2(0,20))
 					get_tree().get_root().add_child(particleEffect)
+			elif(objectParent.is_in_group("PowerUpBrick")):
+				var powerUpBrick = powerUpBrick_scene.instance()
+				powerUpBrick.set_pos(objectParent.get_pos())
+				objectParent.queue_free()
+				get_tree().get_root().add_child(powerUpBrick)
 		var finalMov = normal.slide(moveRemainder)
 		if(normal == Vector2(1,0) or normal == Vector2(-1,0)):
 			speedX = 0
