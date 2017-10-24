@@ -1,6 +1,6 @@
 extends KinematicBody2D
 #Variables
-var power = 1
+var power = 0
 var speedX = 0
 var speedY = 0
 var velocity = Vector2(0,0)
@@ -93,4 +93,12 @@ func _process(delta):
 			if(!landed):
 				playerSprite.set_frame(0)
 				landed = true
+				
+	var area = get_node("Area2D").get_overlapping_bodies()
+	if(area.size() !=0):
+		for body in area:
+			if(body.is_in_group("PowerUp")):
+				power+=1
+				body.queue_free()
+	
 	pass

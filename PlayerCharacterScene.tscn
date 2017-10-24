@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://resources/img/GodotSpriteSheet.tex" type="Texture" id=2]
@@ -7,6 +7,11 @@
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 16.8516 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
 
 [node name="PlayerCharacter" type="KinematicBody2D"]
 
@@ -51,5 +56,24 @@ drag_margin/left = 0.2
 drag_margin/top = 0.2
 drag_margin/right = 0.2
 drag_margin/bottom = 0.2
+
+[node name="Area2D" type="Area2D" parent="."]
+
+input/pickable = true
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1.52351, 0, 0, 2.18369, 6.30389, 0.194169 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+
+transform/pos = Vector2( 6.30389, 0.194169 )
+transform/scale = Vector2( 1.52351, 2.18369 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
 
 

@@ -20,6 +20,8 @@ func _process(delta):
 	var movementRemainder = move(velocity)
 	if is_colliding():
 		var normal = get_collision_normal()
+		var object = get_collider()
+		var objectParent = object.get_parent()		
 		if(normal == Vector2(0,-1)):
 			speedY = 0
 		if(normal == Vector2(1,0)):
