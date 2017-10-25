@@ -113,5 +113,7 @@ func _process(delta):
 				power+=1
 				body.queue_free()
 				get_node("Sprite").set_modulate(Color("#5b6dff"))
+			if(body.is_in_group("Pits")):
+				get_tree().reload_current_scene()
 	
 	pass

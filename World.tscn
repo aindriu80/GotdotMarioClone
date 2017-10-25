@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=1]
+[gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://resources/img/Bush.png" type="Texture" id=1]
 [ext_resource path="res://resources/img/MapTileset.tex" type="Texture" id=2]
@@ -21,6 +21,11 @@ extents = Vector2( 10, 120.77 )
 
 custom_solver_bias = 0.0
 extents = Vector2( 8.70276, 8.57684 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 18.2988, 10 )
 
 [node name="World" type="Node2D"]
 
@@ -2297,10 +2302,33 @@ transform/pos = Vector2( 21.8211, -0.264908 )
 
 [node name="Pipe1" parent="." instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 627.13, 0 )
+transform/pos = Vector2( 599.998, -1.50732 )
 
 [node name="Pipe2" parent="." instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 759.086, 0 )
+
+[node name="Pit" type="StaticBody2D" parent="." groups=[
+"Pits",
+]]
+
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 45.5912, 0, 0, 1, 1030.54, 448.615 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pit"]
+
+transform/pos = Vector2( 1030.54, 448.615 )
+transform/scale = Vector2( 45.5912, 1 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
 
 
