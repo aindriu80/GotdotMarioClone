@@ -83,10 +83,16 @@ func _process(delta):
 					particleEffect.set_pos(get_pos()-Vector2(0,20))
 					get_tree().get_root().add_child(particleEffect)
 			elif(objectParent.is_in_group("PowerUpBrick")):
+				#Create the power up Brick
 				var powerUpBrick = powerUpBrick_scene.instance()
-				powerUpBrick.set_pos(objectParent.get_pos())
+				powerUpBrick.set_pos(objectParent.get_node("Sprite").get_global_pos())
 				objectParent.queue_free()
 				get_tree().get_root().add_child(powerUpBrick)
+				#Create the actual powerup
+				var powerUp = powerUp_scene.instance()
+				powerUp.set_pos(get_pos()-Vector2(0,50))
+				get_tree().get_root().add_child(powerUp)
+				
 		var finalMov = normal.slide(moveRemainder)
 		if(normal == Vector2(1,0) or normal == Vector2(-1,0)):
 			speedX = 0
@@ -106,5 +112,6 @@ func _process(delta):
 			if(body.is_in_group("PowerUp")):
 				power+=1
 				body.queue_free()
+				get_node("Sprite").set_modulate(Color("#5b6dff"))
 	
 	pass

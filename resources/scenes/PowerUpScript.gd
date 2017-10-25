@@ -6,7 +6,7 @@ var velocity = Vector2(0,0)
 var movementDirection = 1
 
 #Constants
-const SPEEDX = 200
+const SPEEDX = 150
 const GRAVITY = 800
 
 func _ready():
