@@ -2307,13 +2307,18 @@ transform/pos = Vector2( 599.998, -1.50732 )
 
 [node name="Pipe2" parent="." instance=ExtResource( 6 )]
 
-transform/pos = Vector2( 759.086, 0 )
+transform/pos = Vector2( 757.858, -1.22774 )
+
+[node name="Pipe3" parent="." instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 304.822, 0 )
 
 [node name="Pit" type="StaticBody2D" parent="." groups=[
 "Pits",
 ]]
 
 editor/display_folded = true
+transform/pos = Vector2( -149.087, -5.04359 )
 input/pickable = false
 shapes/0/shape = SubResource( 4 )
 shapes/0/transform = Matrix32( 45.5912, 0, 0, 1, 1030.54, 448.615 )

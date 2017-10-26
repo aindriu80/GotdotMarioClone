@@ -11,6 +11,9 @@ var MAXJUMPCOUNT = 1
 var jumpcount = 0
 var deltaTime = 0
 var landed 
+var incincible = false
+var inviTimer = 0
+var invicibleTime = 0
 #Constants
 const MAXIMUMSPEED = 300
 const MOVMULTI = 800
@@ -34,6 +37,18 @@ func _ready():
 	pass
 	
 func _process(delta):
+	if(incincible):
+		inviTimer = inviTimer+delta
+		invicibleTime = invicibleTime + delta
+		if(invicibleTime>1):
+			incincible=false
+			get_node("Sprite").set_opacity(1) 
+		if(inviTimer> 0.05):
+			if(get_node("Sprite").get_opacity() == 1):
+				get_node("Sprite").set_opacity(0)
+			else:
+				get_node("Sprite").set_opacity(1)
+			inviTimer = 0
 	if(Input.is_action_pressed("move_jump") and jumpcount<MAXJUMPCOUNT):
 		speedY = -JUMPFORCE
 		jumpcount+=1
@@ -118,9 +133,11 @@ func _process(delta):
 			if(body.is_in_group("Enemy")):
 				if(body.get_pos().y > get_pos().y):
 					body.get_node("CollisionShape2D").set_trigger(true)
-				else:
-					power-=1
+				elif(!incincible):
+					power-=1					
+					incincible = true
+					if(power==0):
+						get_node("Sprite").set_modulate(Color("#ffffff"))
 					if(power<0):
-						get_tree().reload_current_scene()
-	
+						get_tree().reload_current_scene()	
 	pass
