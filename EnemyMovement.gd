@@ -3,18 +3,30 @@ extends KinematicBody2D
 #variables
 var speedY = 0
 var velocity = Vector2(0,0)
-var movementDirection = 1
+var movementDirection = -1
+var deltaTime = 0
 
 #Constants
 const SPEEDX = 150
 const GRAVITY = 800
 
 
+func _animate():
+	if(get_node("Sprite").get_frame()>=3):
+		get_node("Sprite").set_frame(0)
+	if(get_node("Sprite").get_frame()<3):
+		get_node("Sprite").set_frame(get_node("Sprite").get_frame()+1)
+	deltaTime = 0
+	pass
+
 func _ready():
 	set_process(true)
 	pass
 
 func _process(delta):
+	deltaTime = deltaTime + delta
+	if(deltaTime > 0.1):
+		_animate()
 	speedY += GRAVITY * delta
 	velocity.x = SPEEDX * delta * movementDirection
 	velocity.y = speedY * delta
