@@ -24,6 +24,8 @@ func _ready():
 	pass
 
 func _process(delta):
+	if(get_node("CollisionShape2D").is_trigger()):
+		get_node("Sprite").set_frame(4)
 	deltaTime = deltaTime + delta
 	if(deltaTime > 0.1):
 		_animate()
@@ -39,8 +41,10 @@ func _process(delta):
 			speedY = 0
 		if(normal == Vector2(1,0)):
 			movementDirection = 1
+			get_node("Sprite").set_flip_h(true)
 		elif( normal == Vector2(-1,0)):
 			movementDirection = -1
+			get_node("Sprite").set_flip_h(false)
 		var finalMovement = normal.slide(movementRemainder)
 		move(finalMovement)	
 	pass

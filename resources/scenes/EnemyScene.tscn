@@ -3,16 +3,18 @@
 [ext_resource path="res://EnemyMovement.gd" type="Script" id=1]
 [ext_resource path="res://resources/img/Enemy.tex" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 11.9893, 16.1263 )
 
-[node name="Enemy" type="KinematicBody2D"]
+[node name="Enemy" type="KinematicBody2D" groups=[
+"Enemy",
+]]
 
 transform/pos = Vector2( 462.305, 294.175 )
 input/pickable = false
-shapes/0/shape = SubResource( 5 )
+shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, -7.40466, 2.4032 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -23,7 +25,7 @@ script/script = ExtResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 transform/pos = Vector2( -7.40466, 2.4032 )
-shape = SubResource( 5 )
+shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 

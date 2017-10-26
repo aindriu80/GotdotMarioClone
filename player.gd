@@ -115,5 +115,12 @@ func _process(delta):
 				get_node("Sprite").set_modulate(Color("#5b6dff"))
 			if(body.is_in_group("Pits")):
 				get_tree().reload_current_scene()
+			if(body.is_in_group("Enemy")):
+				if(body.get_pos().y > get_pos().y):
+					body.get_node("CollisionShape2D").set_trigger(true)
+				else:
+					power-=1
+					if(power<0):
+						get_tree().reload_current_scene()
 	
 	pass

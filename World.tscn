@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=1]
+[gd_scene load_steps=12 format=1]
 
 [ext_resource path="res://resources/img/Bush.png" type="Texture" id=1]
 [ext_resource path="res://resources/img/MapTileset.tex" type="Texture" id=2]
@@ -27,11 +27,6 @@ extents = Vector2( 8.70276, 8.57684 )
 
 custom_solver_bias = 0.0
 extents = Vector2( 18.2988, 10 )
-
-[sub_resource type="RectangleShape2D" id=5]
-
-custom_solver_bias = 0.0
-extents = Vector2( 11.9893, 16.1263 )
 
 [node name="World" type="Node2D"]
 
@@ -2338,15 +2333,16 @@ shape = SubResource( 4 )
 trigger = false
 _update_shape_index = 0
 
-[node name="Enemy" type="KinematicBody2D" parent="." instance=ExtResource( 7 )]
+[node name="Enemy" parent="." instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 524.537, 385.7 )
-input/pickable = false
-shapes/0/shape = SubResource( 5 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, -7.40466, 2.4032 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-collision/margin = 0.08
+
+[node name="Enemy2" parent="." instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 1233.24, 388.439 )
+
+[node name="Enemy1" parent="." instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 955.423, 385.485 )
 
 
